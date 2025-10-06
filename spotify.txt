@@ -1,0 +1,23 @@
+Spotify Analysis Dataset 2025
+
+https://www.kaggle.com/datasets/nabihazahid/spotify-dataset-for-churn-analysis?resource=download
+
+user_id,gender,age,country,subscription_type,listening_time,songs_played_per_day,skip_rate,device_type,ads_listened_per_week,offline_listening,is_churned
+
+PERGUNTAS A SEREM RESPONDIDAS POR MEIO DE QUERIES (ELABORADA PELO NOTEBOOKLM)
+-----NÍVEL BÁSICO
+1. Liste o user_id, age e listening_time dos 5 usuários mais velhos que ainda estão ativos (is_churned = 0).
+2. Quais são os user_id e subscription_type de todos os usuários da França (country = 'FR'') cuja skip_rate (taxa de pulo) é superior a 50%?
+3. Liste todos os usuários (user_id, gender) que são do tipo Free ou Student (subscription_type) e que não ouviram nenhum anúncio na semana (ads_listened_per_week = 0).
+4. Encontre usuários que não têm dados registrados na coluna offline_listening.
+
+-----NÍVEL INTERMEDIÁRIO
+5. Calcule o tempo médio de escuta (AVG(listening_time)) e a taxa de rotatividade (AVG(is_churned) * 100) para cada subscription_type.
+6. Qual é a média de músicas puladas (AVG(skip_rate)) e a média de anúncios ouvidos (AVG(ads_listened_per_week)) por device_type para usuários que cancelaram (is_churned = 1)?
+7. Liste os country (países) onde o número total de usuários é maior que 5.000 e a média de tempo de escuta diária (AVG(listening_time)) é menor que 60 minutos.
+8. Qual o gender (gênero) que possui a maior proporção de usuários com skip_rate acima de 70%?
+
+-----NÍVEL AVANÇADO
+9. Liste todos os usuários (user_id, subscription_type) cujo offline_listening é superior à média de offline_listening de todos os usuários 'Premium'.
+10. Identifique os subscription_type (tipos de assinatura) cuja taxa média de pulo (AVG(skip_rate)) é mais alta do que a taxa média de pulo global (de todos os usuários).
+11. Analise a eficiência da sua consulta mais complexa (e.g., uma que use filtros em country e age e agregue por subscription_type). Como você inspecionaria o Plano de Execução escolhido pelo PostgreSQL e o tempo real gasto para executá-la?

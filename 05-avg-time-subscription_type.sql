@@ -1,0 +1,1 @@
+SELECT AVG(listening_time) AS AVG_TIME, subscription_type FROM spotify_data GROUP BY subscription_type;
